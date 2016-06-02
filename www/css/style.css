@@ -1,0 +1,28 @@
+/* Empty. Add your own CSS if you like */
+
+.backgound-blue {
+	background-color: #03899c;
+}
+
+.home-container .row-center img{
+    ----position:absolute;
+    left: 0;
+    right: 0;
+    margin:0 auto;
+    margin-top: 40%;
+    margin-bottom: 0%;
+    width:80%;
+    transform:translateY(-50%);
+}
+
+.home-container .row-center button{
+	----position:absolute;
+    ----top:70%;
+    margin:30px auto;
+    transform:translateY(-50%);
+}
+
+.wrapping-list .item-content, .wrapping-list .item {
+    overflow: initial;
+    white-space: initial;
+}

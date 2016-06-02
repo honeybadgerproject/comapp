@@ -1,0 +1,16 @@
+{
+  "name": "comapp",
+  "app_id": "",
+  "proxies": [
+  	{
+      "path": "/api/survey",
+      "proxyUrl": "http://ecosystemmap.co:3000/api/survey"
+    } ,
+    {
+      "path": "/api/survey/1",
+      "proxyUrl": "http://ecosystemmap.co:3000/api/survey/1"
+    }
+
+  ]
+
+}

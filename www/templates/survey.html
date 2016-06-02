@@ -1,0 +1,26 @@
+<ion-pane>
+  <ion-header-bar class="bar bar-header bar-positive">
+    <h1 class="title">ComApp</h1>
+    <button class="button icon ion-home" ng-click="returnToHome()"></button>
+  </ion-header-bar>
+  <ion-content>
+    <div class="list wrapping-list">
+
+      <a class="item item-icon-left item-icon-top" ng-repeat="surveyq in survey">
+        <i class="icon icon-top ion-clipboard"></i>
+        <h2>{{surveyq.title}}</h2>
+        <div class="list wrapping-list" ng-repeat="question in surveyq.questions">     
+          <label>
+            {{$index + 1}}.- {{question.title}}, <i>{{question.description}}</i>
+          </label>
+          <p ng-repeat="answer in question.answers">
+            *.- {{answer.title}}
+          <p>
+        </div>
+
+
+      </a>
+
+    </div>
+  </ion-content>
+</ion-pane>
