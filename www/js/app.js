@@ -8,7 +8,7 @@
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
 .constant('SurveyEndpoint', {
-  url: 'http://localhost:8100/api'
+  url: 'http://107.170.10.139:3000/api'
 })
 
 .run(function($ionicPlatform) {
