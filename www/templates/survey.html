@@ -1,4 +1,33 @@
-<ion-pane>
+<ion-view title="Survey">
+  <ion-header-bar class="bar bar-header bar-positive">
+    <h1 class="title">ComApp</h1>
+    <button class="button icon ion-home" ng-click="returnToHome()"></button>
+  </ion-header-bar>
+  <ion-content class="has-header">
+
+      <!-- <div class="list">
+        
+            <ion-radio collection-repeat="answer in survey"
+              ng-value="$index"
+              ng-model="ng">
+              {{answer.title}}
+            </ion-radio>      
+        
+      </div> -->
+
+    <div class="list wrapping-list">
+      <a class="item item-icon-left item-icon-right" ng-repeat="surveyq in survey"
+        ng-click="goToSurveQuestion(surveyq.questions)">
+        <i class="icon ion-clipboard"></i>
+        <h2>{{surveyq.title}}</h2>
+        <i class="icon ion-chevron-right"></i>  
+      </a>
+
+    </div>
+  </ion-content>
+</ion-view>
+  
+<!--
   <ion-header-bar class="bar bar-header bar-positive">
     <h1 class="title">ComApp</h1>
     <button class="button icon ion-home" ng-click="returnToHome()"></button>
@@ -13,14 +42,23 @@
           <label>
             {{$index + 1}}.- {{question.title}}, <i>{{question.description}}</i>
           </label>
-          <p ng-repeat="answer in question.answers">
-            *.- {{answer.title}}
-          <p>
+          <div class="list">-->
+            <!--<p ng-repeat="answer in question.answers">-->
+              <!--{{answer.title}} :
+              <ion-radio ng-model="choice" ng-value="'A'">{{answer.title}}</ion-radio>-->
+        <!--      <label class="item item-radio">
+                <input type="radio" name="group1">
+                <div class="item-content">
+                  {{answer.title}}
+                </div>
+                <i class="radio-icon ion-checkmark"></i>
+              </label> -->
+            <!--</p>-->
+    <!--      </div>
         </div>
 
 
       </a>
 
     </div>
-  </ion-content>
-</ion-pane>
+  </ion-content> -->

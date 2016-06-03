@@ -27,6 +27,13 @@ angular.module('starter.services', [])
 })
 
 
+.factory('QuestionArray', function() {
+      return {
+         value: new Array(),
+         answer: new Array(),
+         type: ''
+      };
+  })
 
 .factory('Chats', function() {
   // Might use a resource here that returns a JSON array

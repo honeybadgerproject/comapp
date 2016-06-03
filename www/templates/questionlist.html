@@ -1,0 +1,33 @@
+<ion-view title="QuestionList" ng-controller="SurveyCtrl">
+  <ion-header-bar class="bar bar-header bar-positive">
+  <button class="button icon ion-chevron-left" ng-click="returnToSurvey()"></button>
+    <h1 class="title">ComApp</h1>
+
+  </ion-header-bar>
+  <ion-content padding="true" class="has-header" ng-init="printValue()">
+    <div class="list wrapping-list" ng-repeat="question in questionArray">   
+         
+          <h4>
+            {{$index + 1}}.- {{question.title}}, <i>{{question.description}}</i>
+          </h4>
+          <p>
+            <a class="button button-small icon-right ion-chevron-right button-calm"
+              ng-click="goToQuestion(question.answers, question.type)">contestar</a>
+          </p>
+        
+          
+    </div>
+    <!--<div class="list">
+        
+            <ion-radio collection-repeat="answer in question.answers"
+              ng-value="$index"
+              ng-model="ng">
+              {{answer.title}}
+            </ion-radio>      
+        
+      </div> -->
+
+  </ion-content>
+</ion-view>
+
+

@@ -5,6 +5,8 @@ angular.module('starter.controllers', [])
 
   $scope.projects = new Array();
 
+  
+
 
   $scope.returnToHome = function() {
     $state.go('services');
@@ -36,12 +38,52 @@ angular.module('starter.controllers', [])
   
 })
 
-.controller('SurveyCtrl', function($scope, $state, Api) {
+.controller('SurveyCtrl', function($scope, $state, Api, QuestionArray) {
   
   $scope.survey = new Array();
 
+  $scope.questionArray = new Array();
+  $scope.answerArray = new Array();
+  $scope.typeAnswer = '';
+
+
   $scope.returnToHome = function() {
     $state.go('services');
+  };
+
+  $scope.returnToSurvey = function() {
+    console.log("to survey");
+    $state.go('survey');
+  };
+
+  $scope.returnToQuestionList = function() {
+    console.log("to question list");
+    $state.go('questionlist');
+  };
+
+
+  $scope.goToSurveQuestion = function(questionarray) {
+    QuestionArray.value = questionarray;
+    console.log(QuestionArray.value);
+    $state.go('questionlist');
+  };
+
+  $scope.printValue = function() {
+    $scope.questionArray = QuestionArray.value;
+    console.log(QuestionArray.value);
+  };
+
+  $scope.printAnswer = function() {
+    $scope.answerArray = QuestionArray.answer;
+    $scope.typeAnswer =  QuestionArray.type;
+    console.log(QuestionArray.answer);
+  }
+
+  $scope.goToQuestion = function(answer, typeanswer) {
+    QuestionArray.answer = answer;
+    QuestionArray.type = typeanswer;
+    console.log(QuestionArray.answer);
+    $state.go('question');
   };
 
   var apiParams = "/survey/1";
@@ -58,6 +100,10 @@ angular.module('starter.controllers', [])
 
   
 
+})
+
+.controller('QuestionListCtrl', function($scope, $state, Api) {
+  
 })
 
 .controller('LoginCtrl', function($scope, $state) {

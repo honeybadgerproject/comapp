@@ -48,6 +48,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       templateUrl: 'templates/survey.html',
       controller: 'SurveyCtrl'
   })
+
+  // Survey Question
+  .state('questionlist', {
+      url: '/questionlist',
+      templateUrl: 'templates/questionlist.html'
+  })
+
+  // Question
+  .state('question', {
+      url: '/question',
+      templateUrl: 'templates/question.html'
+  })
  
   // login
   .state('login', {
